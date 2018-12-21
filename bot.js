@@ -23,6 +23,7 @@ const client = new Discord.Client({disableEveryone: true});
 var adminprefix = 's1'
 /////////////////////////
 ////////////////////////
+
 const developers = ["417377495160193044","462434603895095297"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
@@ -51,3 +52,6 @@ client.on('message', message => {
   client.user.setUsername(argresult).then
       message.channel.send(`Changing The Name To ..**${argresult}** `)
 } else
+
+
+client.login(process.env.BOT_TOKEN);
